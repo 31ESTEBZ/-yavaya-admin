@@ -23,8 +23,9 @@ api.interceptors.response.use(
 );
 
 // ─── Auth ─────────────────────────────────────────────────────────────────────
-export const sendOtp = (phone) => api.post('/auth/send-otp', { phone });
-export const verifyOtp = (phone, code) => api.post('/auth/verify-otp', { phone, code });
+export const adminLogin = (email, password) => api.post('/auth/admin/login', { email, password });
+export const sendOtp    = (phone) => api.post('/auth/send-otp', { phone });
+export const verifyOtp  = (phone, code) => api.post('/auth/verify-otp', { phone, code });
 
 // ─── Admin stats ──────────────────────────────────────────────────────────────
 export const getStats = () => api.get('/admin/stats');
